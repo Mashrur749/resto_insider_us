@@ -17,8 +17,10 @@ export default function Search() {
 
   const [stateCode, setStateCode] = useState(restaurantList.selectedState);
   const [streetAddress, setStreetAddress] = useState("");
+  const [restaurantName, setRestaurantName] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [rating, setRating] = useState("");
+
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {
@@ -29,36 +31,56 @@ export default function Search() {
 
   useEffect(() => {
     if (searched === true) {
-      dispatch(SyncChange(cuisine, streetAddress, rating));
+      dispatch(SyncChange(restaurantName, cuisine, streetAddress, rating));
     }
-  }, [streetAddress, cuisine, rating]);
+  }, [streetAddress, cuisine, rating, restaurantName]);
 
-  const handleStateSelection = (e) => {
+  function handleStateSelection(e) {
     setStateCode(e.target.value);
     setStreetAddress("");
     setCuisine("");
     setRating("");
-  };
+  }
 
-  const handleStreetAddressChange = (e) => {
+  function handleStreetAddressChange(e) {
     setStreetAddress(e.target.value);
     setSearched(true);
-  };
+  }
 
-  const handleCuisineTypeChange = (e) => {
+  function handleCuisineTypeChange(e) {
     setCuisine(e.target.value);
     setSearched(true);
-  };
+  }
 
-  const handleRatingSelection = (e) => {
+  function handleRatingSelection(e) {
     setRating(e.target.value);
     setSearched(true);
-  };
+  }
 
+  function handleNameChange(e) {
+    setRestaurantName(e.target.value);
+    setSearched(true);
+  }
   return (
     <section id="search" className="container">
       {restaurantList.selectedState && (
         <>
+          <div className="row">
+            <div className="col-25">
+              <label htmlFor="restaurantName">Restaurant Name:</label>
+            </div>
+            <div className="col-75">
+              <input
+                className="col-75"
+                type="text"
+                name="Restaurant Name"
+                id="restaurantName"
+                placeholder="Restaurant name..."
+                onChange={handleNameChange}
+                value={restaurantName}
+              />
+            </div>
+          </div>
           <div className="row">
             <div className="col-25">
               <label htmlFor="streetAddress">Street Address:</label>

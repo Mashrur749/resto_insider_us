@@ -44,6 +44,9 @@ const RestaurantListReducer = (state = initialState, { type, payload }) => {
         ...state,
         data: state.apiData.filter(
           (restaurant) =>
+            restaurant.restaurant_name
+              .toLowerCase()
+              .includes(payload.restaurantName.toLowerCase()) &&
             restaurant.cuisines
               .join("")
               .toLowerCase()

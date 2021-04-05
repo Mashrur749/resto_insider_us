@@ -40,13 +40,13 @@ nav {
 }
 
 #logo {
-  animation: 1.5s ease-in 0s 1 shrink;
+  animation: 0.8s ease-in 0s 1 shrink;
   width: 100px;
   margin: 10px;
 }
 
 .page-heading {
-  animation: 2s ease-in-out 0s 1 slideInFromLeft;
+  animation: 0.8s ease-in-out 0s 1 slideInFromLeft;
   padding: 30px;
   text-align: center;
   background-color: rgba(235, 255, 51, 0.479);

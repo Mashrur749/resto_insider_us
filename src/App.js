@@ -18,12 +18,20 @@ function App() {
   return (
     <div className="App">
       <nav role="navigation">
-        <a href="/">
-          <img id="logo" src={logo} alt="Restaurant Insider US Logo" />
+        <a href="/" title="Restaurant Insider US Logo">
+          <img
+            aria-label="Restaurant Insider US Logo"
+            id="logo"
+            loading="lazy"
+            src={logo}
+            alt="Restaurant Insider US Logo"
+          />
         </a>
       </nav>
-      <main>
-        <h1 className="page-heading">Find Restaurants in US</h1>
+      <div role="main">
+        <h1 className="page-heading" title="Find Restaurants in US">
+          Find Restaurants in US
+        </h1>
         <Search />
         <RestaurantList />
         {/* <Switch>
@@ -31,7 +39,7 @@ function App() {
           <Route path="/restaurant/:id" exact component={Restaurant} />
           <Redirect to="/" />
         </Switch> */}
-      </main>
+      </div>
     </div>
   );
 }
