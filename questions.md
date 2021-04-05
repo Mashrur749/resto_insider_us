@@ -7,6 +7,7 @@ It took somewhere around 5-6 hours coding the assignment.
 If I had more time I would
 
 - add front-end caching to reduce API calls
+- use WAI-ARIA for accessibility
 - Use lazy loading for the media assets
 - refine the micro-interactions
 - improve error handling
