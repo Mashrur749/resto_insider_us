@@ -47,7 +47,7 @@ const ResturantList = (props) => {
       return <li className="error">{resturantList.errorMsg}</li>;
     }
 
-    return <li>unable to get data</li>;
+    return <li>No restaurants to show</li>;
   };
 
   return <ul className="container flex">{ShowData()}</ul>;
