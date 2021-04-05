@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/resto_insider_us/static/css/main.123b0d1b.chunk.css",
+    "main.css": "/resto_insider_us/static/css/main.41505105.chunk.css",
     "main.js": "/resto_insider_us/static/js/main.ff17dcec.chunk.js",
     "main.js.map": "/resto_insider_us/static/js/main.ff17dcec.chunk.js.map",
     "runtime-main.js": "/resto_insider_us/static/js/runtime-main.88befbc8.js",
@@ -10,14 +10,14 @@
     "static/js/3.97eef87a.chunk.js": "/resto_insider_us/static/js/3.97eef87a.chunk.js",
     "static/js/3.97eef87a.chunk.js.map": "/resto_insider_us/static/js/3.97eef87a.chunk.js.map",
     "index.html": "/resto_insider_us/index.html",
-    "static/css/main.123b0d1b.chunk.css.map": "/resto_insider_us/static/css/main.123b0d1b.chunk.css.map",
+    "static/css/main.41505105.chunk.css.map": "/resto_insider_us/static/css/main.41505105.chunk.css.map",
     "static/js/2.6fa0e1d3.chunk.js.LICENSE.txt": "/resto_insider_us/static/js/2.6fa0e1d3.chunk.js.LICENSE.txt",
     "static/media/resto_insider_logo.0076beea.png": "/resto_insider_us/static/media/resto_insider_logo.0076beea.png"
   },
   "entrypoints": [
     "static/js/runtime-main.88befbc8.js",
     "static/js/2.6fa0e1d3.chunk.js",
-    "static/css/main.123b0d1b.chunk.css",
+    "static/css/main.41505105.chunk.css",
     "static/js/main.ff17dcec.chunk.js"
   ]
 }
