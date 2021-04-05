@@ -1,6 +1,5 @@
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
-
 import Restaurant from "./components/Restaurant";
 import RestaurantList from "./components/RestaurantList";
 import Search from "./components/Search";
@@ -26,11 +25,12 @@ function App() {
       <main>
         <h1 className="page-heading">Find Restaurants in US</h1>
         <Search />
-        <Switch>
+        <RestaurantList />
+        {/* <Switch>
           <Route path="/" exact component={RestaurantList} />
           <Route path="/restaurant/:id" exact component={Restaurant} />
           <Redirect to="/" />
-        </Switch>
+        </Switch> */}
       </main>
     </div>
   );

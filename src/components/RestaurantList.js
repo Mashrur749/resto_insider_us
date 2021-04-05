@@ -6,8 +6,6 @@ import "./RestaurantList.css";
 const ResturantList = (props) => {
   const resturantList = useSelector((state) => state.RestaurantList);
 
-  console.log(resturantList);
-
   const showRating = (ratingNum) => {
     let stars = "";
     for (let i = 0; i < ratingNum; i++) {

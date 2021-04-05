@@ -19,14 +19,13 @@ export default function Search() {
   const [streetAddress, setStreetAddress] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [rating, setRating] = useState("");
-  const [limit, setLimit] = useState(20);
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {
     if (stateCode !== "") {
-      dispatch(FetchRestaurantInfoByState(stateCode, limit));
+      dispatch(FetchRestaurantInfoByState(stateCode));
     }
-  }, [stateCode, limit]);
+  }, [stateCode]);
 
   useEffect(() => {
     if (searched === true) {
@@ -53,11 +52,6 @@ export default function Search() {
 
   const handleRatingSelection = (e) => {
     setRating(e.target.value);
-    setSearched(true);
-  };
-
-  const handleCuisineLimitChange = (e) => {
-    setLimit(e.target.value);
     setSearched(true);
   };
 
