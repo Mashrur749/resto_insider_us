@@ -32,12 +32,6 @@ nav {
   background-color: rgb(255, 236, 131);
 }
 
-nav a {
-  margin-right: 50px;
-  color: white;
-  text-decoration: none;
-}
-
 #logo {
   animation: 0.6s ease-in 0s 1 shrink;
   width: 100px;
