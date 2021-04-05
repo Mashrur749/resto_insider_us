@@ -6,14 +6,6 @@ import Search from "./components/Search";
 
 import logo from "./assets/resto_insider_logo.png";
 
-// const React = require("react");
-// const ReactDOM = require("react-dom");
-
-// if (process.env.NODE_ENV !== "production") {
-//   const axe = require("@axe-core/react");
-//   axe(React, ReactDOM, 1000);
-// }
-
 function App() {
   return (
     <div className="App">
@@ -28,17 +20,14 @@ function App() {
           />
         </a>
       </nav>
-      <div role="main">
+      <header>
         <h1 className="page-heading" title="Find Restaurants in US">
           Find Restaurants in US
         </h1>
+      </header>
+      <div role="main">
         <Search />
         <RestaurantList />
-        {/* <Switch>
-          <Route path="/" exact component={RestaurantList} />
-          <Route path="/restaurant/:id" exact component={Restaurant} />
-          <Redirect to="/" />
-        </Switch> */}
       </div>
     </div>
   );
