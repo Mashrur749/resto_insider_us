@@ -2,4 +2,4 @@
 
 Live application URL: https://restoinsiderus.web.app/
 
-#Tech Stack: React, Redux
+Tech Stack: React, Redux
