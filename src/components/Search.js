@@ -64,7 +64,7 @@ export default function Search() {
   }
   return (
     <section id="search" className="container">
-      {restaurantList.selectedState && (
+      {restaurantList.data.length > 0 && (
         <>
           <div className="row">
             <div className="col-25">
