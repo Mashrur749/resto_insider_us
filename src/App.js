@@ -1,8 +1,11 @@
-import "./App.css";
-import RestaurantList from "./components/RestaurantList";
-import Search from "./components/Search";
+import { Switch, Route } from "react-router-dom";
 
 import logo from "./assets/resto_insider_logo.png";
+import "./App.css";
+
+import RestaurantList from "./components/RestaurantList";
+import Restaurant from "./components/Restaurant";
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -27,7 +30,10 @@ function App() {
       </header>
       <div role="main">
         <Search />
-        <RestaurantList />
+        <Switch>
+          <Route exact path="/" component={RestaurantList} />
+          <Route exact path="/restaurant/:id" component={Restaurant} />
+        </Switch>
       </div>
     </div>
   );
