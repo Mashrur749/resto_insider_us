@@ -1,6 +1,4 @@
 import "./App.css";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Restaurant from "./components/Restaurant";
 import RestaurantList from "./components/RestaurantList";
 import Search from "./components/Search";
 
@@ -12,6 +10,8 @@ function App() {
       <nav role="navigation">
         <a href="/" title="Restaurant Insider US Logo">
           <img
+            width={"100px"}
+            height={"100px"}
             aria-label="Restaurant Insider US Logo"
             id="logo"
             loading="lazy"

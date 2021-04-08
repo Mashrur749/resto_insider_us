@@ -1,4 +1,3 @@
-import axios from "axios";
 import {
   RESTAURANT_LIST_LOADING,
   RESTAURANT_LIST_FAILURE,
@@ -14,24 +13,31 @@ export const FetchRestaurantInfoByState = function (stateCode, limit) {
       type: RESTAURANT_LIST_LOADING,
     });
     try {
-      const res = await axios({
-        method: "GET",
-        url: `https://us-restaurant-menus.p.rapidapi.com/restaurants/state/${stateCode}?limit=${limit}`,
-        headers: {
-          "X-RapidAPI-Key": env.DOCUMENU_API_KEY,
-          useQueryString: true,
-          Pragma: "no-cache",
-        },
-      });
+      let res = await fetch(
+        `https://us-restaurant-menus.p.rapidapi.com/restaurants/state/${stateCode}?limit=${limit}`,
+        {
+          cache: "no-cache",
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Key": env.DOCUMENU_API_KEY,
+            useQueryString: true,
+            Pragma: "no-cache",
+          },
+        }
+      );
 
-      res.data.result.data.forEach((element) => {
+      res = await res.json();
+
+      console.log(res.result.data);
+
+      res.result.data.forEach((element) => {
         element.rating = Math.floor(Math.random() * 6);
       });
 
       dispatch({
         type: RESTAURANT_LIST_SUCCESS,
         payload: {
-          restaurants: res.data.result.data,
+          restaurants: res.result.data,
           selectedState: stateCode,
         },
       });

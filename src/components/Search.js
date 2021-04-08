@@ -58,6 +58,7 @@ export default function Search() {
   }
 
   function handleNameChange(e) {
+    console.log("trigger");
     setRestaurantName(e.target.value);
     setSearched(true);
   }
@@ -141,7 +142,7 @@ export default function Search() {
           <label htmlFor="city">Please select a city:</label>
         </div>
         <div className="col-75">
-          <select name="city" id="city" onInput={handleStateSelection}>
+          <select name="city" id="city" onChange={handleStateSelection}>
             <option value={""}> Select a city </option>
             {usStateInfo.map((stateInfo) => (
               <option key={stateInfo.code} value={stateInfo.code}>
