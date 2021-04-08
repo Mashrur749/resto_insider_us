@@ -21,7 +21,7 @@ const ResturantList = (props) => {
 
     if (!_.isEmpty(resturantList.data)) {
       return resturantList.data.map((el, idx) => (
-        <li tabindex={idx} className="flex-item" key={el.restaurant_id}>
+        <li tabindex={idx + 1} className="flex-item" key={el.restaurant_id}>
           <h2 className="restaurant-name">{el.restaurant_name}</h2>
           <p className="restaurant-rating">
             Rating: {el.rating ? showRating(el.rating) : "n/a"}
