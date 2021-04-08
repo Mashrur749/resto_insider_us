@@ -35,33 +35,33 @@ export default function Search() {
     }
   }, [streetAddress, cuisine, rating, restaurantName]);
 
-  function handleStateSelection(e) {
+  const handleStateSelection = (e) => {
     setStateCode(e.target.value);
     setStreetAddress("");
     setCuisine("");
     setRating("");
-  }
+  };
 
-  function handleStreetAddressChange(e) {
+  const handleStreetAddressChange = (e) => {
     setStreetAddress(e.target.value);
     setSearched(true);
-  }
+  };
 
-  function handleCuisineTypeChange(e) {
+  const handleCuisineTypeChange = (e) => {
     setCuisine(e.target.value);
     setSearched(true);
-  }
+  };
 
-  function handleRatingSelection(e) {
+  const handleRatingSelection = (e) => {
     setRating(e.target.value);
     setSearched(true);
-  }
+  };
 
-  function handleNameChange(e) {
+  const handleNameChange = (e) => {
     console.log("trigger");
     setRestaurantName(e.target.value);
     setSearched(true);
-  }
+  };
   return (
     <section id="search" className="container">
       {restaurantList.data.length > 0 && (
